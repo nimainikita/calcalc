@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calories Calc</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+
+<div class="container">
+	<h1 class="main-heading">Счетчик калорий</h1>
+	<form class="main">
+		<!--Выбор гендера-->
+		<div class="form-genders">
+			<h2 class="gender-heading">Пол</h2>
+			<div class="genders">
+				<div class="gender">
+					<input id="male" name="gender" type="radio" value="-5" required checked>
+					<label for="male">Мужской</label>
+				</div>
+				<div class="gender">
+					<input id="female" name="gender" type="radio" value="161" required>
+					<label for="female">Женский</label>
+				</div>
+			</div>
+		</div>
+		<!--Параметры-->
+		<div class="form-parametres">
+			<div class="parametr">
+				<h2 class="parametr-heading">Возраст <span>лет</span></h2>
+				<input type="text" id="age" inputmode="decimal" maxlength="3" required placeholder="0">
+			</div>
+			<div class="parametr">
+				<h2 class="parametr-heading">Рост <span>см</span></h2>
+				<input type="text" id="heigth" inputmode="decimal" maxlength="3" required placeholder="0">
+			</div>
+			<div class="parametr">
+				<h2 class="parametr-heading">Вес <span>кг</span></h2>
+				<input type="text" id="weigth" inputmode="decimal" maxlength="3" required placeholder="0">
+			</div>
+		</div>
+		<!--Активность-->
+		<div class="form-activities">
+			<h2 class="activity-heading">Активность</h2>
+			<div class="activities">
+				
+				<div class="activity-wrapper">
+					<input id="min" class="activity" value="1.2" name="activity" type="radio" checked>
+				    <label class="activity-label" for="min">Минимальная</label>
+				    <p class="activity-descr">Сидячая работа и нет физических нагрузок</p>
+				</div>
+				<div class="activity-wrapper">
+					<input id="low" class="activity" value="1.375" name="activity" type="radio">
+				    <label class="activity-label" for="low">Низкая</label>
+				    <p class="activity-descr">Редкие, нерегулярные тренировки, активность в быту</p>
+				</div>
+				<div class="activity-wrapper">
+					<input id="medium" class="activity" value="1.55" name="activity" type="radio">
+				    <label class="activity-label" for="medium">Средняя</label>
+				    <p class="activity-descr">Тренировки 3-5 раз в неделю</p>
+				</div>
+				<div class="activity-wrapper">
+					<input id="high" class="activity" value="1.725" name="activity" type="radio">
+				    <label class="activity-label" for="high">Высокая</label>
+				    <p class="activity-descr">Тренировки 6-7 раз в неделю</p>
+				</div>
+				<div class="activity-wrapper">
+					<input id="highest" class="activity" value="1.9" name="activity" type="radio">
+				    <label class="activity-label" for="highest">Очень высокая</label>
+				    <p class="activity-descr">Больше 6 тренировок в неделю и физическая работа</p>
+				</div>
+					
+					
+				
+			</div>
+		</div>
+		<!--Кнопки расчета-->
+		<div class="form-buttons">
+			<button class="form-submit-button">Расчитать</button>
+			<button class="form-reset-button">Сбросить</button>
+		</div>
+	</form>
+	<!--Результаты расчетов-->
+	<section class="results-counter results-counter-hidden">
+		<h2>Ваша норма калорий</h2>
+		<div class="results">
+			<div class="result">
+				<h2 id="norm-weigth">0</h2>
+				<p>Поддержание веса</p>
+			</div>
+			<div class="result">
+				<h2 id="drop-weigth">0</h2>
+				<p>Снижение веса</p>
+			</div>
+			<div class="result">
+				<h2 id="up-weigth">0</h2>
+				<p>Набор веса</p>
+			</div>
+		</div>
+		
+	</section>
+</div>
+
+<script src="script.js"></script>
+<script src="modal.js"></script>
+</body>
+</html>
